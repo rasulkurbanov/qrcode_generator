@@ -11,7 +11,9 @@ qr = qrcode.QRCode(
     border=4
 )
 
-qr.add_data('https://t.me/nekbin')
+input_data = input("Enter the data: ")
+
+qr.add_data(input_data)
 qr.make(fit=True)
 
 img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
